@@ -1,3 +1,48 @@
+/* COMMON */
 body {
-  color: red;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  
+  font-family: "Nanum Gothic", sans-serif;
+
 }
+img {
+  display: block;
+}
+
+/* HEAD */
+header {
+  background-color: royalblue;
+}
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: auto;
+  background-color: orange;
+  position: relative;
+}
+header .logo {  
+  /* 수직 가운데 배치 기본 css
+     요소의 높이를 지정 후 위치를 top:0, bottom:0, margin:auto 로 설정하면 자동으로 가운데 정렬됨
+  */
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto 0;
+}
+
+/* .nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nanum-gothic-bold {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
