@@ -48,3 +48,10 @@ fadeEls.forEach((fedeEl, index) => {
     opacity: 1
   });
 });
+
+const swiper = new Swiper('.notice-line .swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  autoplay: true, // 자동 넘김
+  loop: true, // 반복 여부
+});
