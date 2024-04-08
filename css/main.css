@@ -55,11 +55,11 @@ li {
   color: #fff;
   background-color: #592B18;
 }
-.btn.btn-gold {
+.btn.btn--gold {
   color: #D9AA8A;
   border-color: #D9AA8A;
 }
-.btn.btn-gold:hover {
+.btn.btn--gold:hover {
   color: #FFF;
   background-color: #D9AA8A;
 }
@@ -637,3 +637,35 @@ header .badges .badge {
 
 .season-product .text-group  .more {
 }
+
+
+/* RESERVE COFFEE */
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+}
+
+.reserve-coffee .inner { 
+  height: 400px;
+}
+
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+
+.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+
+.reserve-coffee .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
