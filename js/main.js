@@ -76,6 +76,16 @@ const swiper2 = new Swiper('.promotion .swiper', {
   }
 });
 
+const swiper3 = new Swiper('.awards .swiper', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next',
+  }
+});
 
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
@@ -126,3 +136,4 @@ spyEls.forEach((spyEl) => {
       .setClassToggle(spyEl, 'show')
       .addTo(new ScrollMagic.Controller());  
 })
+
