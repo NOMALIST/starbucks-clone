@@ -20,6 +20,9 @@ searchInputEl.addEventListener('blur', () => {
 
 const badgeEL = document.querySelector('header .badges');
 
+// _.throttle(함수, 함수 실행 시간)
+/* lodash.js 를 통해 함수의 실행을 컨트롤할 수 있음.
+   스크롤 이벤트가 너무 반복적으로 실행되는 것을 방지*/
 window.addEventListener('scroll', _.throttle(() => {
   if(window.scrollY > 500) {
     // 배지 숨기기
@@ -28,6 +31,10 @@ window.addEventListener('scroll', _.throttle(() => {
       opacity: 0,
       display: 'none'
     });
+    // ToTop 버튼 보이기
+    gsap.to('#to-top', .2, {
+      x: 0
+    });
   } else {
     // 배지 보이기
     // badgeEL.style.display = 'block';
@@ -35,11 +42,19 @@ window.addEventListener('scroll', _.throttle(() => {
       opacity: 1,
       display: 'block'
     });
+    // ToTop 버튼 숨기기
+    gsap.to('#to-top', .2, {
+      x: 100
+    });
   }
 }, 300));
-// _.throttle(함수, 함수 실행 시간)
-/* lodash.js 를 통해 함수의 실행을 컨트롤할 수 있음.
-   스크롤 이벤트가 너무 반복적으로 실행되는 것을 방지*/
+
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+});
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach((fedeEl, index) => {
