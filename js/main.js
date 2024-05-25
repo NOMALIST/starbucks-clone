@@ -1,24 +1,6 @@
 
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', () => {
-  searchInputEl.focus();
-});
-
-
-searchInputEl.addEventListener('focus', () => {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', () => {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-  // searchInputEl.textContent = '';
-});
-
 const badgeEL = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 // _.throttle(함수, 함수 실행 시간)
 /* lodash.js 를 통해 함수의 실행을 컨트롤할 수 있음.
@@ -49,7 +31,6 @@ window.addEventListener('scroll', _.throttle(() => {
   }
 }, 300));
 
-const toTopEl = document.querySelector('#to-top');
 toTopEl.addEventListener('click', () => {
   gsap.to(window, .7, {
     scrollTo: 0
@@ -152,5 +133,3 @@ spyEls.forEach((spyEl) => {
       .addTo(new ScrollMagic.Controller());  
 })
 
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
